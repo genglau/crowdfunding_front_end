@@ -9,6 +9,9 @@ import ContactPage from "./pages/ContactPage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
 import PledgePage from "./pages/PledgePage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
+import SignupPage from "./pages/SignupPage.jsx";
+import CreateProjectPage from "./pages/CreateProjectPage.jsx";
+
 
 // Here we import our components
 import NavBar from "./components/NavBar.jsx";
@@ -24,10 +27,12 @@ const router = createBrowserRouter([
        children: [
            { path: "/", element: <HomePage /> },
            { path: "/login", element: <LoginPage /> },
+           { path: "/signup", element: <SignupPage /> },
            { path: "/about", element: <AboutPage /> },
            { path: "/contact", element: <ContactPage /> },
            { path: "/project/:id", element:<ProjectPage /> },
            { path: "/pledge", element: <PledgePage /> },
+           { path: "/create-project", element: <CreateProjectPage /> },
        ],
 
   },

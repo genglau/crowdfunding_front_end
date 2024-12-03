@@ -22,12 +22,19 @@ function NavBar() {
                   Log Out
             </Link>
             ) : (
-            <Link to="/login">Login</Link>
+            <Link to="/login">Log In</Link>
+            
         )}
+
+        <Link to="/signup">Sign Up</Link>
        
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
-        <Link to="/pledge">pledge</Link>
+
+        {auth.token ? <Link to="/create-project">Create Project</Link> : null} 
+
+
+        <Link to="/pledge">Pledge</Link>
       </nav>
       {/* React Router will pass components into the <Outlet /> based on the path */}
       <Outlet />

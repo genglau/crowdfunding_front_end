@@ -68,6 +68,10 @@ function LoginForm() {
                Login
         </button>
 
+        <button type="button" onClick={() => navigate("/signup")}>
+              Sign Up
+        </button>
+
       </form>
     );
   }
