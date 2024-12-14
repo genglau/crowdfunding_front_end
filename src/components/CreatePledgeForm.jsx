@@ -1,20 +1,20 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth.js";
-import postProject from "../api/post-project.js";
+import postPledge from "../api/post-pledge.js";
 
-function CreateProjectForm() {
+function CreatePledgeForm(props) {
+  const { projectData } = props
   const user_id = window.localStorage.getItem("userid")
   const navigate = useNavigate();
   const { auth } = useAuth();
   const [formData, setFormData] = useState({
-    owner: user_id,
-    title: "",
-    description: "",
-    goal: "",
-    image: "",
-    is_open: true,
-    current_funded_amount: 0, // Default value
+    supporter: user_id,
+    amount: "",
+    anonymous: true,
+    project: projectData.id,
+
+    comment: "",
   });
 
   const [error, setError] = useState("");
@@ -37,42 +37,38 @@ function CreateProjectForm() {
         // Post the project data (owner will be inferred from auth)
         
         const payload = { ...formData };
-        await postProject(payload, auth.token);
-        navigate("/"); // Redirect to home page
+        await postPledge(payload, auth.token);
+        navigate(`/project/${project_id}`); 
     } catch (err) {
-      setError(err.message);
+      setError("Error creating pledge: " + err.message);
     }
   };
 
   return (
     <form onSubmit={handleSubmit}>
+      <h2>Create a Pledge</h2>
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
       <div>
-        <label htmlFor="title">Title:</label>
-        <input type="text" id="title" onChange={handleChange} required />
+        <label htmlFor="amount">Amount:</label>
+        <input type="number" id="amount" onChange={handleChange} required />
       </div>
       <div>
-        <label htmlFor="description">Description:</label>
-        <textarea id="description" onChange={handleChange} required />
+        <label htmlFor="comment">Comment:</label>
+        <textarea id="comment" onChange={handleChange} required />
       </div>
+      
       <div>
-        <label htmlFor="goal">Goal:</label>
-        <input type="number" id="goal" onChange={handleChange} required />
-      </div>
-      <div>
-        <label htmlFor="image">Image URL:</label>
-        <input type="url" id="image" onChange={handleChange} required />
-      </div>
-      <div>
-        <label htmlFor="is_open">Is Open:</label>
-        <select id="is_open" onChange={handleChange}>
+        <label htmlFor="anonymous">Anonymous:</label>
+        <select id="anonymous" onChange={handleChange}>
           <option value={true}>Yes</option>
           <option value={false}>No</option>
         </select>
       </div>
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <button type="submit">Create Project</button>
+      <button type="submit">Submit Pledge</button>
     </form>
   );
 }
 
-export default CreateProjectForm;
+export default CreatePledgeForm;

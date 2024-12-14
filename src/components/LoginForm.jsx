@@ -30,6 +30,7 @@ function LoginForm() {
                            credentials.password
                        ).then((response) => {
                         window.localStorage.setItem("token", response.token);
+                        window.localStorage.setItem("userid", response.user_id);
                         setAuth({
                               token: response.token,
                         });

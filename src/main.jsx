@@ -7,10 +7,11 @@ import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import ContactPage from "./pages/ContactPage.jsx";
 import ProjectPage from "./pages/ProjectPage.jsx";
-import PledgePage from "./pages/PledgePage.jsx";
+import PledgePage from "./pages/CreatePledgePage.jsx";
 import LoginPage from "./pages/LoginPage.jsx";
 import SignupPage from "./pages/SignupPage.jsx";
 import CreateProjectPage from "./pages/CreateProjectPage.jsx";
+import CreatePledgePage from "./pages/CreatePledgePage.jsx";
 
 
 // Here we import our components
@@ -31,8 +32,9 @@ const router = createBrowserRouter([
            { path: "/about", element: <AboutPage /> },
            { path: "/contact", element: <ContactPage /> },
            { path: "/project/:id", element:<ProjectPage /> },
-           { path: "/pledge", element: <PledgePage /> },
+           { path: "/pledges/:id", element: <PledgePage /> },
            { path: "/create-project", element: <CreateProjectPage /> },
+           { path: "/create-pledge", element: <CreatePledgePage /> },
        ],
 
   },

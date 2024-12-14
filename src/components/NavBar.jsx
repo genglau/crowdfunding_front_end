@@ -7,6 +7,7 @@ function NavBar() {
 
    const handleLogout = () => {
        window.localStorage.removeItem("token");
+       window.localStorage.removeItem("userid");
        setAuth({ token: null });
    };
 
@@ -33,8 +34,6 @@ function NavBar() {
 
         {auth.token ? <Link to="/create-project">Create Project</Link> : null} 
 
-
-        <Link to="/pledge">Pledge</Link>
       </nav>
       {/* React Router will pass components into the <Outlet /> based on the path */}
       <Outlet />
