@@ -66,7 +66,7 @@ function LoginForm() {
 
         </div>
         
-        <button class="rainbow-button" id="submit" type="submit" onClick={handleSubmit}>
+        <button class="rainbow-button" id="submit" type="button" onClick={handleSubmit}>
                Login
         </button>
 

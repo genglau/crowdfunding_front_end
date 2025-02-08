@@ -131,6 +131,7 @@ nav {
   flex-wrap: wrap;
   font-size: 20px;
   text-align: center;
+  border-radius: 20px;
 }
 
 nav a {
