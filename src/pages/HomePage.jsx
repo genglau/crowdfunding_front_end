@@ -20,10 +20,14 @@ function HomePage() {
     <div className="home">
 
         <div className="about-section">
-            <h1>About Little Dreamers</h1>
+            <h2>Welcome to Little Dreamers</h2>
+
             <p>
-            Welcome to our Little Dreamers, a kids-friendly crowdfunding platform! Create, pledge, and watch projects grow!   
+            Here, young minds dream, create, and innovate – and with your help, their projects can blossom into reality. Join us in nurturing the future generation of creators.   
             </p>
+            <h3>
+            They Imagine. You Pledge. Together, We Grow. 
+            </h3>
 
         </div>
 

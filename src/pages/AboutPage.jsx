@@ -6,6 +6,9 @@ function AboutPage() {
   return (
     <div className="about">
       <h1>About Little Dreamers</h1>
+      <h3>
+      Ignite Creativity, Inspire Innovation, Support Dreams.
+      </h3>
       <p>
         Welcome to our Little Dreamers, a kids-friendly crowdfunding platform! This is a place where young innovators can share their amazing ideas and bring them to life with the help of supporters. Create, pledge, and watch projects grow!
       </p>

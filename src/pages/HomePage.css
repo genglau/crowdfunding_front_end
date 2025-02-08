@@ -10,10 +10,11 @@
 .about-section {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   gap: 30px;
-  margin-top: 40px;
-  margin-bottom: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: 200px;
   margin-right: 200px;
   font-size:x-large;
@@ -22,8 +23,15 @@
   line-height: 1.8;
 }
 
+.about-section h2 {
+  display: flex;
+  justify-content: center;
+}
 .about-section p {
+  display: flex;
   background-color: rgba(214, 233, 245, 0.8);
+  justify-content: center;
+
 }
 
 .slideshow img {
