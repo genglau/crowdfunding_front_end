@@ -6,6 +6,7 @@ body {
     no-repeat center center fixed;
   background-size: cover;
   filter: brightness(1); /* Lightens the background */
+  min-height: 100vh;
 
   font-family: "Comic Sans MS", "Poppins", sans-serif;
   background-color: #c9e7f5;
@@ -25,6 +26,7 @@ input,
 textarea,
 button {
   margin: 15px 0;
+  text-align: center;
 }
 
 /* Frames for forms, tables, and cards */
@@ -52,9 +54,11 @@ button {
   color: white;
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 20px;
+  font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
+  
 }
 
 .rainbow-button:hover {
@@ -71,7 +75,7 @@ h2 {
   font-weight: bold;
 }
 
-S
+
 button {
   background-image: linear-gradient(
     to right,
@@ -98,7 +102,7 @@ button {
 /* Forms */
 form {
   background: white;
-  padding: 40px;
+  padding: 20px;
   border-radius: 40px;
   max-width: 400px;
   margin: auto;
@@ -123,7 +127,10 @@ nav {
   padding: 10px;
   display: flex;
   justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
   font-size: 20px;
+  text-align: center;
 }
 
 nav a {
@@ -135,4 +142,11 @@ nav a {
 
 nav a:hover {
   color: #ff6600;
+}
+
+@media (max-width: 600px) {
+  button {
+      font-size: 14px;
+  }
+  
 }
