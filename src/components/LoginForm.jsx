@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import postLogin from "../api/post-login.js";
 import {useAuth} from "../hooks/use-auth.js";
+import "../pages/global.css";
 
 
 function LoginForm() {
@@ -65,11 +66,11 @@ function LoginForm() {
 
         </div>
         
-        <button type="submit" onClick={handleSubmit}>
+        <button class="rainbow-button" id="submit" type="submit" onClick={handleSubmit}>
                Login
         </button>
 
-        <button type="button" onClick={() => navigate("/signup")}>
+        <button class="rainbow-button" id="submit" type="button" onClick={() => navigate("/signup")}>
               Sign Up
         </button>
 

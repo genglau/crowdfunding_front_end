@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+body {
+  
+  background: url("https://th.bing.com/th/id/R.e5a5a78630a5902906103db838542885?rik=omVAZBIRZRchWA&riu=http%3a%2f%2fwallpapercave.com%2fwp%2f321Dy5L.jpg&ehk=ZdkAFAg%2fdPoGlJEBze35OQ0%2bdZ4Ndw0XOL%2bMjxZ3Mzo%3d&risl=&pid=ImgRaw&r=0")
+    no-repeat center center fixed;
+  background-size: cover;
+  filter: brightness(1); /* Lightens the background */
+
+  font-family: "Comic Sans MS", "Poppins", sans-serif;
+  background-color: #c9e7f5;
+  font-size: 18px;
+  color: #333;
+  /*margin: 0;
+  padding: 0;*/
+}
+
+/* Ensures even spacing */
+h1,
+h2,
+h3,
+p,
+label,
+input,
+textarea,
+button {
+  margin: 15px 0;
+}
+
+/* Frames for forms, tables, and cards */
+.project-card,
+.contact-form,
+.pledge-section {
+  border: 2px solid #ccc;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+}
+
+/* Rainbow Buttons */
+.rainbow-button {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.rainbow-button:hover {
+  filter: brightness(1.2);
+}
+
+h1, h2, h3 {
+  text-align: center;
+  color: #ff6600;
+  
+}
+
+h2 {
+  font-weight: bold;
+}
+
+S
+button {
+  background-image: linear-gradient(
+    to right,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.button:hover {
+  filter: brightness(1.2);
+}
+
+/* Forms */
+form {
+  background: white;
+  padding: 40px;
+  border-radius: 40px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.2);
+  font-size: xx-large;
+  margin-top: 100px;
+
+  
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 25px;
+  row-gap: 10px;
+}
+
+nav {
+  background-color: #acdceb;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  font-size: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  padding: 10px;
+}
+
+nav a:hover {
+  color: #ff6600;
+}

@@ -3,6 +3,8 @@ import { useNavigate } from "react-router-dom";
 import postSignup from "../api/post-signup.js";
 import postLogin from "../api/post-login.js";
 import { useAuth } from "../hooks/use-auth.js";
+import "../pages/global.css";
+import "../pages/SignupPage.css";
 
 function SignupForm() {
   const navigate = useNavigate();
@@ -72,7 +74,7 @@ function SignupForm() {
         <input type="password" id="rePassword" onChange={handleChange} required />
       </div>
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <button type="submit">Sign Up</button>
+      <button class="rainbow-button" id="submit" type="submit">Sign Up</button>
     </form>
   );
 }

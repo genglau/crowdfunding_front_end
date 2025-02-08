@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth.js";
 import postPledge from "../api/post-pledge.js";
+import "../pages/global.css";
 
 function CreatePledgeForm(props) {
   const { projectData } = props
@@ -66,7 +67,7 @@ function CreatePledgeForm(props) {
         </select>
       </div>
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <button type="submit">Submit Pledge</button>
+      <button class="rainbow-button" id="submit" type="submit">Submit Pledge</button>
     </form>
   );
 }

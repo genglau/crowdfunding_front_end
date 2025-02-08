@@ -1,5 +1,6 @@
 import { Link, Outlet } from "react-router-dom";
 import {useAuth} from "../hooks/use-auth.js";
+import "../pages/global.css";
 
 function NavBar() {
 
@@ -29,8 +30,8 @@ function NavBar() {
 
         <Link to="/signup">Sign Up</Link>
        
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
+        <Link to="/about">Contact Us</Link>
+        {/*<Link to="/contact">Contact</Link>*/}
 
         {auth.token ? <Link to="/create-project">Create Project</Link> : null} 
 

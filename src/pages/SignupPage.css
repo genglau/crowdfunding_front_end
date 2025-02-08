@@ -1,0 +1,32 @@
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 200px;
+  }
+  
+  .signup-box {
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 400px;
+  }
+  
+  .signup-box input {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  @media (min-width: 768px) {
+    .signup-box {
+      width: 50%;
+    }
+  }
+ 
+  .SignupForm {
+    margin-top: 200px;
+  }

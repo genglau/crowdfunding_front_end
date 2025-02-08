@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/use-auth.js";
 import postProject from "../api/post-project.js";
+import "../pages/global.css";
 
 function CreateProjectForm() {
   const user_id = window.localStorage.getItem("userid")
@@ -70,7 +71,7 @@ function CreateProjectForm() {
         </select>
       </div>
       {error && <p style={{ color: "red" }}>{error}</p>}
-      <button type="submit">Create Project</button>
+      <button class="rainbow-button" id="submit" type="submit">Create Project</button>
     </form>
   );
 }
